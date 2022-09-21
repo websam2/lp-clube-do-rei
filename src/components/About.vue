@@ -1,21 +1,19 @@
 <template>
-  <div class="flex items-center max-w-7x1 m-4">
-    <div class="flex flex-row items-center">
-      <div class="flex flex-col justify-center lg:w-1/2">
-        <Title class="font-bold"
-          ><span class="text-red">S</span>obre o Clube do Rei
-        </Title>
-        <Subtitle class=""
+  <div class="md:flex items-center justify-center w-full">
+    <div class="flex items-center lg:rounded-3xl p-4">
+      <div class="flex flex-col lg:ml-10">
+        <Title class="lg:mb-6 font-bold"
+          ><span class="text-red">S</span>obre o Clube do Rei</Title
+        >
+        <Subtitle class="md:w-[780px]"
           >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut efficitur
           tristique elit a facilisis. Vestibulum ante ipsum primis in faucibus
           orci luctus et ultrices posuere cubilia curae; Morbi scelerisque felis
-          ac ultricies sodales. Donec sit amet nunc semper, volutpat libero sit
-          amet, sagittis metus.
-        </Subtitle>
+          ac ultricies sodales.</Subtitle
+        >
       </div>
-
-      <div class="lg:w-1/2">
-        <img src="../assets/about.png" alt="Sobre o Clube do Rei" />
+      <div class="">
+        <img src="../assets/about.png" alt="Promoções e descontos" />
       </div>
     </div>
   </div>

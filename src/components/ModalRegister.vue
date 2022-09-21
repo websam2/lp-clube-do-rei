@@ -154,7 +154,7 @@
 
 <script>
 // import axios from "axios";
-import Loading from "../components/Loading.vue";
+import Loading from "./Loading.vue";
 export default {
   components: { Loading },
   data: () => ({

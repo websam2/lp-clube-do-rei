@@ -2,7 +2,7 @@
   <div
     class="md:flex items-center justify-center bg-gradient-to-r from-orange to-yellow w-full"
   >
-    <div class="flex items-center bg-white lg:rounded-3xl lg:p-16 p-4">
+    <div class="flex items-center bg-white lg:rounded-3xl lg:p-16 p-4 m-4">
       <div class="">
         <img src="../assets/group-promotion.png" alt="Promoções e descontos" />
       </div>

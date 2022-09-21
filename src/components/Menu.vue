@@ -43,14 +43,15 @@
           >Promoções</router-link
         >
 
-        <router-link class="hover:bg-yellow py-4 px-6 rounded-sm" 
-        to="/login"
-          >Entrar</router-link>
+        <label for="login" class="hover:bg-yellow py-4 px-6 rounded-sm"
+          >Entrar</label
+        >
 
         <router-link
           class="btn sm:text-xs lg:text-sm bg-yellow hover:bg-red rounded-3xl text-black hover:text-white border-0"
-          to="/Register"
-          >Faça parte do Clube</router-link>
+          to=""
+          >Faça parte do Clube</router-link
+        >
       </ul>
 
       <!-- Menu mobile -->
@@ -89,16 +90,93 @@
       </button>
     </div>
   </div>
+<!-- Modal Login -->
+  <input type="checkbox" id="login" class="modal-toggle" />
+  <div class="modal modal-bottom sm:modal-middle">
+    <div class="flex flex-col rounded-xl p-10 bg-white">
+      <div class="flex justify-end">
+        <label for="login" class="btn btn-circle btn-outline">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </label>
+      </div>
+      <div class="flex justify-center">
+        <img
+          class="w-24 m-6 cursor-pointer"
+          src="/src/assets/logoReiChurrasquinho.svg"
+          alt="Rei do Churrasquinho"
+        />
+      </div>
+
+      <div class="font-bold text-xl mb-6">
+        Preencha os campos e acesse sua conta!
+      </div>
+      <FormKit
+        type="form"
+        :actions="false"
+        @submit="register"
+        message-class="ml-8 text-error text-xs"
+        incomplete-message="Dados incompletos"
+      >
+        <FormKit
+          type="email"
+          label="E-mail"
+          input-class="input input-bordered w-full"
+          validation-visibility="live"
+          message-class="ml-2 text-error text-xs"
+          label-class="text-lg"
+          placeholder="email@exemplo.com"
+          validation="email|required"
+          :validation-messages="{
+            required: 'O campo está vazio',
+            email: 'E-mail informado é inválido',
+          }"
+        />
+        <FormKit
+          type="password"
+          label-class="text-lg"
+          input-class="input input-bordered w-full"
+          validation-visibility="live"
+          name="password"
+          label="Senha"
+          validation="required"
+          placeholder="****************"
+          message-class="ml-2 text-error text-xs"
+          :validation-messages="{
+            required: 'O campo está vazio',
+          }"
+        />
+
+        <button
+          @click="register()"
+          class="btn sm:w-full bg-yellow hover:bg-red rounded-3xl text-black hover:text-white border-0 mt-6"
+        >
+          Entrar
+        </button>
+      </FormKit>
+    </div>
+  </div>
+  
 </template>
 
 <script>
-import Login from "../views/Login.vue";
-import Register from "../views/Register.vue";
+
 export default {
   name: "menu",
   components: {
-    Login,
-    Register,
+   
   },
 
   methods: {

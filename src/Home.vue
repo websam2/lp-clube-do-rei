@@ -7,7 +7,7 @@
       <Banner />
     </div>
 
-    <div class="flex justify-center mb-20">
+    <div class="mb-20">
       <About />
     </div>
 
@@ -23,17 +23,18 @@
       <NewPartner />
     </div>
 
-    <div class="mb-20">
+      <div class="mb-20">
       <Promotion />
     </div>
 
     <Footer />
 
     <ButtonUP />
-  </div>
-  <router-view />
 
-  <router-view/>
+    
+
+  </div>
+
 </template>
 
 <style>
