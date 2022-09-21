@@ -7,9 +7,11 @@
           >Venha para o Clube do Rei e descubra o
           <span class="text-red">sabor da vida!</span>
         </Title>
+
         <button
-          @click="goTo(700)"
-          class="btn w-48 lg:ml-20 bg-yellow hover:bg-red rounded-3xl text-black hover:text-white border-0 m-6"
+          @click="goTo(500)"
+          class="btn w-48 lg:ml-20 bg-yellow hover:bg-red rounded-3xl text-black hover:text-white border-0 m-6 motion-safe:animate-bounce"
+          data-aos="fade-right"
         >
           Ver benefícios
           <img
@@ -21,7 +23,7 @@
       </div>
 
       <!-- Direito -->
-      <div class="flex flex-row items-end w-1/2 lg:mr-20">
+      <div class="flex flex-row items-end w-1/2 lg:mr-20" data-aos="fade-left">
         <div class="flex flex-row">
           <img src="../assets/hero.png" alt="hero" />
         </div>
@@ -53,7 +55,8 @@
     </div>
     <!-- card inferior -->
     <div
-      class="hidden md:flex flex-row items-center justify-center bg-gradient-to-r from-orange to-yellow sm:p-[2%] rounded-3xl lg:-mt-14 lg:p-16"
+      class="hidden md:flex flex-row items-center justify-center bg-gradient-to-r from-orange to-yellow sm:p-[2%] rounded-3xl lg:-mt-14 lg:p-16 animate-pulse"
+      data-aos="fade-up"
     >
       <div class="m-4">
         <img class="w-[10%]" src="../assets/1.svg" alt="" />

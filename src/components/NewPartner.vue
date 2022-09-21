@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-center">
     <div
-      class="flex flex-col lg:flex-row items-center justify-center lg:w-[50%] bg-white rounded-3xl p-4"
+      class="flex flex-col lg:flex-row items-center justify-center lg:w-[50%] bg-white rounded-3xl p-4" data-aos="fade-up"
     >
       <div class="lg:ml-10">
         <Title class="mb-6 font-bold"

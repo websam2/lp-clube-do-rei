@@ -12,7 +12,7 @@
           ac ultricies sodales.</Subtitle
         >
       </div>
-      <div class="">
+      <div class="" data-aos="fade-left">
         <img src="../assets/about.png" alt="Promoções e descontos" />
       </div>
     </div>

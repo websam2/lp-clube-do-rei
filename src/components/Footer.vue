@@ -1,6 +1,6 @@
 <template>
   <div
-    class="hidden md:flex items-center justify-center bg-gradient-to-r from-orange to-yellow w-full p-16 mt-20 rounded-tl-[80px] rounded-tr-[80px]"
+    class="hidden md:flex items-center justify-center bg-gradient-to-r from-orange to-yellow w-full p-16 mt-20 rounded-tl-[80px] rounded-tr-[80px]" data-aos="fade-up"
   >
     <div class="flex flex-row">
       <img src="../assets/mockup.png" alt="" />

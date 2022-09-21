@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed z-50 top-0 left-0 opacity-95 bg-white w-full shadow">
+  <div class="fixed z-50 top-0 left-0 opacity-95 bg-white w-full shadow" data-aos="flip-up">
     <div class="flex justify-between items-center text-black m-4">
       <img
         @click="goTo('/')"
@@ -47,10 +47,10 @@
           >Entrar</label
         >
 
-        <router-link
+        <label
+          for="registration"
           class="btn sm:text-xs lg:text-sm bg-yellow hover:bg-red rounded-3xl text-black hover:text-white border-0"
-          to=""
-          >Faça parte do Clube</router-link
+          >Faça parte do Clube</label
         >
       </ul>
 
@@ -73,24 +73,29 @@
             <!-- <li @click="goTo(1400)" class="hover:bg-yellow py-4 px-6 w-full">
               Benefícios
             </li> -->
-            <li @click="goTo(700)" class="hover:bg-yellow py-4 px-6 w-full">
+            <li @click="goTo(900)" class="hover:bg-yellow py-4 px-6 w-full">
               Parceiros
             </li>
-            <li @click="goTo(1200)" class="hover:bg-yellow py-4 px-6 w-full">
+            <li @click="goTo(1600)" class="hover:bg-yellow py-4 px-6 w-full">
               Seja um parceiro
             </li>
-            <li @click="goTo(1700)" class="hover:bg-yellow py-4 px-6 w-full">
+            <li @click="goTo(2100)" class="hover:bg-yellow py-4 px-6 w-full">
               Promoções
             </li>
-            <li @click="goTo('')" class="hover:bg-yellow py-4 px-6 w-full">
-              <router-link to="../views/Login.vue">Entrar</router-link>
-            </li>
+
+            <label for="login" class="hover:bg-yellow py-4 px-6 w-full"
+              >Entrar</label
+            >
+
+            <label for="registration" class="hover:bg-yellow py-4 px-6 w-full"
+              >Faça parte do clube</label
+            >
           </ul>
         </div>
       </button>
     </div>
   </div>
-<!-- Modal Login -->
+  <!-- Modal Login -->
   <input type="checkbox" id="login" class="modal-toggle" />
   <div class="modal modal-bottom sm:modal-middle">
     <div class="flex flex-col rounded-xl p-10 bg-white">
@@ -126,7 +131,7 @@
       <FormKit
         type="form"
         :actions="false"
-        @submit="register"
+        @submit="login"
         message-class="ml-8 text-error text-xs"
         incomplete-message="Dados incompletos"
       >
@@ -160,24 +165,181 @@
         />
 
         <button
+          @click="login()"
+          class="btn sm:w-full bg-yellow hover:bg-red rounded-3xl text-black hover:text-white border-0 mt-6"
+        >
+          Entrar
+        </button>
+      </FormKit>
+      <div class="flex flex-col justify-center items-center">
+        <div class="m-4">________ ou ________</div>
+        <div>Ainda não possui uma conta?</div>
+        <label for="registration" class="text-red underline">Registre-se</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Cadastro -->
+  <input type="checkbox" id="registration" class="modal-toggle" />
+  <div class="modal modal-bottom sm:modal-middle">
+    <div class="flex flex-col rounded-xl p-10 bg-white">
+      <div class="flex justify-end">
+        <label for="registration" class="btn btn-circle btn-outline">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </label>
+      </div>
+      <!-- <div class="flex justify-center">
+        <img
+          class="w-24 m-6 cursor-pointer"
+          src="/src/assets/logoReiChurrasquinho.svg"
+          alt="Rei do Churrasquinho"
+        />
+      </div> -->
+
+      <div class="font-bold text-xl m-6">
+        Preencha os campos para fazer o cadastro!
+      </div>
+      <FormKit
+        type="form"
+        :actions="false"
+        @submit="register"
+        message-class="ml-8 text-error text-xs"
+        incomplete-message="Dados incompletos, por favor preencher corretamente"
+      >
+        <FormKit
+          outer-class="m-5"
+          input-class="input input-bordered rounded-md w-full"
+          type="text"
+          label-class="text-lg"
+          label="Nome completo"
+          validation="required"
+          placeholder="Nome completo"
+          message-class="ml-2 text-error text-xs"
+          :validation-messages="{
+            required: 'O campo está vazio',
+          }"
+        />
+        <FormKit
+          outer-class="m-5"
+          input-class="input input-bordered rounded-md w-full"
+          type="email"
+          label-class="text-lg"
+          label="E-mail"
+          validation="required|email"
+          placeholder="email@exemplo.com"
+          message-class="ml-2 text-error text-xs"
+          :validation-messages="{
+            required: 'O campo está vazio',
+            email: 'E-mail informado é inválido',
+          }"
+        />
+        <FormKit
+          outer-class="m-5"
+          input-class="input input-bordered rounded-md w-full"
+          type="select"
+          label-class="text-lg"
+          label="Cidade"
+          validation="required"
+          placeholder="Cidade"
+          message-class="ml-2 text-error text-xs"
+          :options="['Registro', 'Sete Barras', 'Jacupiranga']"
+          :validation-messages="{
+            required: 'O campo está vazio',
+          }"
+        />
+        <FormKit
+          outer-class="m-5"
+          input-class="input input-bordered rounded-md w-full"
+          type="select"
+          label-class="text-lg"
+          label="Estado"
+          validation="required"
+          placeholder="Estado"
+          message-class="ml-2 text-error text-xs"
+          :options="['São Paulo']"
+          :validation-messages="{
+            required: 'O campo está vazio',
+          }"
+        />
+        <FormKit
+          outer-class="m-5"
+          input-class="input input-bordered rounded-md w-full"
+          label-class="text-lg"
+          type="password"
+          name="password"
+          label="Senha"
+          validation="required"
+          placeholder="****************"
+          message-class="ml-2 text-error text-xs"
+          :validation-messages="{
+            required: 'O campo está vazio',
+          }"
+        />
+        <FormKit
+          outer-class="m-5"
+          input-class="input input-bordered rounded-md w-full"
+          label-class="text-lg"
+          type="password"
+          name="password_confirm"
+          label="Confirmar a senha"
+          validation="required|confirm"
+          validation-visibility=""
+          validation-label="Confirmação de senha"
+          placeholder="****************"
+          message-class="ml-2 text-error text-xs"
+          :validation-messages="{
+            required: 'O campo está vazio',
+            confirm: 'Senha não confere',
+          }"
+        />
+        <FormKit
+          outer-class="ml-6"
+          wrapper-class="w-full flex flex-row "
+          label-class="ml-2"
+          type="checkbox"
+          label="Termos de uso e privacidade"
+          name="terms"
+          validation="accepted"
+          validation-visibility=""
+          message-class="ml-2 text-error text-xs"
+          :validation-messages="{
+            accepted: 'Concordo com o termos de uso e privacidade ',
+          }"
+        />
+
+        <button
           @click="register()"
           class="btn sm:w-full bg-yellow hover:bg-red rounded-3xl text-black hover:text-white border-0 mt-6"
         >
           Entrar
         </button>
       </FormKit>
+      <!-- <div class="flex flex-col justify-center items-center">
+        <div class="m-4">________ ou ________</div>
+        <div>Possui uma conta?</div>
+        <label for="login" class="text-red underline">Fazer o Login</label>
+      </div> -->
     </div>
   </div>
-  
 </template>
 
 <script>
-
 export default {
   name: "menu",
-  components: {
-   
-  },
+  components: {},
 
   methods: {
     goTo(y) {
