@@ -1,6 +1,5 @@
 <template>
   <div class="bg-silver flex flex-col w-full h-full">
-    
     <Menu />
 
     <div class="flex justify-center mb-20">
@@ -23,18 +22,16 @@
       <NewPartner />
     </div>
 
-      <div class="mb-20">
+    <div class="mb-20">
       <Promotion />
     </div>
 
-    <Footer />
+    <div class="bg-green">
+      <Footer />
+    </div>
 
     <ButtonUP />
-
-    
-
   </div>
-
 </template>
 
 <style>
@@ -49,7 +46,7 @@
   background-color: #ececec;
 }
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 0px; /* Valor padrão 6px */
   background: #ececec;
 }
 ::-webkit-scrollbar-thumb {

@@ -8,7 +8,7 @@
       data-aos="fade-up"
       data-aos-anchor-placement="center-bottom"
     >
-      <Card name="Nome do Parceiro" city="Cidade" phone="13 99999-9999"></Card>
+      <Card name="KiwiCase" city="Pariquera-Açu" phone="13 99999-9999"></Card>
       <Card name="Nome do Parceiro" city="Cidade" phone="13 99999-9999"></Card>
       <Card name="Nome do Parceiro" city="Cidade" phone="13 99999-9999"></Card>
       <Card name="Nome do Parceiro" city="Cidade" phone="13 99999-9999"></Card>

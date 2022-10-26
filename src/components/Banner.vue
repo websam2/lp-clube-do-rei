@@ -28,11 +28,13 @@
           <img src="../assets/hero.png" alt="hero" />
         </div>
         <div class="flex flex-row lg:mb-20">
-          <a target="_blank" href=""
+          <a
+            target="_blank"
+            href="https://aiqfome.com/SP/registro/rei-das-refeicoes-e-marmitex"
             ><img
               class="m-4 w-2/4"
               src="../assets/logo_aiqfome.svg"
-              alt="Facebook"
+              alt="AiFome"
           /></a>
           <a
             target="_blank"
@@ -48,14 +50,14 @@
             ><img
               class="m-4 w-2/4"
               src="../assets/logo_instagram.svg"
-              alt="Facebook"
+              alt="Instagram"
           /></a>
         </div>
       </div>
     </div>
     <!-- card inferior -->
     <div
-      class="hidden md:flex flex-row items-center justify-center bg-gradient-to-r from-orange to-yellow sm:p-[2%] rounded-3xl lg:-mt-14 lg:p-16 animate-pulse"
+      class="hidden md:flex flex-row items-center justify-center bg-gradient-to-r from-orange to-yellow sm:p-[2%] rounded-3xl lg:-mt-14 lg:p-16"
       data-aos="fade-up"
     >
       <div class="m-4">

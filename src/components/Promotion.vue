@@ -4,6 +4,7 @@
       ><span class="text-red">N</span>ossas promoções</Title
     >
     <div
+      id="promotion"
       class="flex flex-row justify-between mt-4 overflow-x-scroll m-2 mb-10"
       data-aos="fade-up"
       data-aos-anchor-placement="center-bottom"
@@ -24,15 +25,17 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import Title from "./Title.vue";
 import Subtitle from "./Subtitle.vue";
 import PromotionCard from "./PromotionCard.vue";
-export default {
-  components: {
-    Title,
-    Subtitle,
-    PromotionCard,
-  },
-};
+import { onMounted } from "vue";
+
+const getScroll = document.getElementById("promotion");
+
+
+onMounted(() =>{
+
+})
+
 </script>

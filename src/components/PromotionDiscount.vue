@@ -21,7 +21,7 @@
           class="btn sm:w-64 bg-yellow hover:bg-red rounded-3xl text-black hover:text-white border-0 mt-6 animate-pulse"
         >
           Faça parte do clube
-          <img class="m-2 w-4" src="../assets/chevrons-down.svg" alt="" />
+          <!-- <img class="m-2 w-4" src="../assets/chevrons-down.svg" alt="" /> -->
         </label>
       </div>
     </div>

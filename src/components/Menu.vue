@@ -1,5 +1,8 @@
 <template>
-  <div class="fixed z-50 top-0 left-0 opacity-95 bg-white w-full shadow" data-aos="flip-up">
+  <div
+    class="fixed z-50 top-0 left-0 opacity-95 bg-white w-full shadow"
+    data-aos="flip-up"
+  >
     <div class="flex justify-between items-center text-black m-4">
       <img
         @click="goTo('/')"
@@ -43,13 +46,15 @@
           >Promoções</router-link
         >
 
-        <label for="login" class="hover:bg-yellow py-4 px-6 rounded-sm"
+        <label
+          for="login"
+          class="hover:bg-yellow py-4 px-6 rounded-sm cursor-pointer"
           >Entrar</label
         >
 
         <label
           for="registration"
-          class="btn sm:text-xs lg:text-sm bg-yellow hover:bg-red rounded-3xl text-black hover:text-white border-0"
+          class="btn sm:text-xs lg:text-sm bg-yellow hover:bg-red rounded-3xl text-black hover:text-white border-0 ml-2"
           >Faça parte do Clube</label
         >
       </ul>
@@ -174,7 +179,9 @@
       <div class="flex flex-col justify-center items-center">
         <div class="m-4">________ ou ________</div>
         <div>Ainda não possui uma conta?</div>
-        <label for="registration" class="text-red underline">Registre-se</label>
+        <label for="registration" class="text-red underline cursor-pointer"
+          >Registre-se</label
+        >
       </div>
     </div>
   </div>
@@ -220,7 +227,7 @@
         incomplete-message="Dados incompletos, por favor preencher corretamente"
       >
         <FormKit
-          outer-class="m-5"
+          outer-class="mx-5 mb-2"
           input-class="input input-bordered rounded-md w-full"
           type="text"
           label-class="text-lg"
@@ -233,7 +240,7 @@
           }"
         />
         <FormKit
-          outer-class="m-5"
+          outer-class="mx-5 mb-2"
           input-class="input input-bordered rounded-md w-full"
           type="email"
           label-class="text-lg"
@@ -247,8 +254,8 @@
           }"
         />
         <FormKit
-          outer-class="m-5"
-          input-class="input input-bordered rounded-md w-full"
+          outer-class="mx-5 mb-2"
+          input-class="input input-bordered rounded-md w-full "
           type="select"
           label-class="text-lg"
           label="Cidade"
@@ -261,7 +268,7 @@
           }"
         />
         <FormKit
-          outer-class="m-5"
+          outer-class="mx-5 mb-2"
           input-class="input input-bordered rounded-md w-full"
           type="select"
           label-class="text-lg"
@@ -275,7 +282,7 @@
           }"
         />
         <FormKit
-          outer-class="m-5"
+          outer-class="mx-5 mb-2"
           input-class="input input-bordered rounded-md w-full"
           label-class="text-lg"
           type="password"
@@ -289,7 +296,7 @@
           }"
         />
         <FormKit
-          outer-class="m-5"
+          outer-class="mx-5 mb-2"
           input-class="input input-bordered rounded-md w-full"
           label-class="text-lg"
           type="password"
@@ -316,7 +323,7 @@
           validation-visibility=""
           message-class="ml-2 text-error text-xs"
           :validation-messages="{
-            accepted: 'Concordo com o termos de uso e privacidade ',
+            accepted: 'Você precisa aceitar os termos de uso e privacidade ',
           }"
         />
 
@@ -324,7 +331,7 @@
           @click="register()"
           class="btn sm:w-full bg-yellow hover:bg-red rounded-3xl text-black hover:text-white border-0 mt-6"
         >
-          Entrar
+          Cadastrar
         </button>
       </FormKit>
       <!-- <div class="flex flex-col justify-center items-center">

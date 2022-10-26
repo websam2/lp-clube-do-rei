@@ -3,7 +3,7 @@
     <figure>
       <img class="w-full sm:h-60 bg-silver rounded-t-2xl" src="https://via.placeholder.com/240" alt="" />
     </figure>
-    <div class="flex flex-col">
+    <div class="flex flex-col items-center">
       <h2 class="font-bold text-xl m-5">
         {{ name }}
       </h2>
