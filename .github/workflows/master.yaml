@@ -1,40 +1,40 @@
-on: 
-  push: 
-    branches: 
+on:
+  push:
+    branches:
       - master
-name: 🚀 Deploy website on push
+name: 🚀 Deploy website on pushs
 jobs:
   web-deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
-      with:
-        node-version: 16
-    - name: setup git auth
-      env:
-        email: 'thyybr@gmail.com'
-        username: 'thyybrandao'
-        access_token: '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'
-      run: |
-        git config --global credential.helper store
-        echo "https://${access_token}:x-oauth-basic@github.com" > ~/.git-credentials
-        git config --global user.email $email
-        git config --global user.name $username
-    - name: deploy to gh-pages
-      run: |
-        npm i
-        NODE_ENV=production npm run build
-        cd dist
-        git init
-        git add -A
-        git commit -m "🚀 Deploy id ${GITHUB_RUN_ID}"
-        git push -f "https://github.com/${GITHUB_REPOSITORY}.git" 
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.3.2
-      with:
-        server: ${{ secrets.ftp_host }}
-        username: ${{ secrets.ftp_user }}
-        password: ${{ secrets.ftp_password }}
-        server-dir: public_html/rei/lp
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: setup git auth
+        env:
+          email: "thyybr@gmail.com"
+          username: "thyybrandao"
+          access_token: "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"
+        run: |
+          git config --global credential.helper store
+          echo "https://${access_token}:x-oauth-basic@github.com" > ~/.git-credentials
+          git config --global user.email $email
+          git config --global user.name $username
+      - name: deploy to gh-pages
+        run: |
+          npm i
+          NODE_ENV=production npm run build
+          cd dist
+          git init
+          git add -A
+          git commit -m "🚀 Deploy id ${GITHUB_RUN_ID}"
+          git push -f "https://github.com/websam2/LP-ClubeDoRei.git"
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.2
+        with:
+          server: ${{ secrets.ftp_host }}
+          username: ${{ secrets.ftp_user }}
+          password: ${{ secrets.ftp_password }}
+          server-dir: public_html/rei/lp
