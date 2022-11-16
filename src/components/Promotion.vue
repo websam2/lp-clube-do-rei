@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col">
     <Title class="sm:ml-16 p-4 font-bold"
-      ><span class="text-red">N</span>ossas promoções</Title
+      ><span class="text-red">V</span>eja as promoções da semana</Title
     >
     <div
       id="promotion"
@@ -9,14 +9,6 @@
       data-aos="fade-up"
       data-aos-anchor-placement="center-bottom"
     >
-      <PromotionCard name="Nome do produto" real="R$10,00"></PromotionCard>
-      <PromotionCard name="Nome do produto" real="R$10,00"></PromotionCard>
-      <PromotionCard name="Nome do produto" real="R$10,00"></PromotionCard>
-      <PromotionCard name="Nome do produto" real="R$10,00"></PromotionCard>
-      <PromotionCard name="Nome do produto" real="R$10,00"></PromotionCard>
-      <PromotionCard name="Nome do produto" real="R$10,00"></PromotionCard>
-      <PromotionCard name="Nome do produto" real="R$10,00"></PromotionCard>
-      <PromotionCard name="Nome do produto" real="R$10,00"></PromotionCard>
       <PromotionCard name="Nome do produto" real="R$10,00"></PromotionCard>
       <PromotionCard name="Nome do produto" real="R$10,00"></PromotionCard>
       <PromotionCard name="Nome do produto" real="R$10,00"></PromotionCard>

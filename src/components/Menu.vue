@@ -253,35 +253,7 @@
             email: 'E-mail informado é inválido',
           }"
         />
-        <FormKit
-          outer-class="mx-5 mb-2"
-          input-class="input input-bordered rounded-md w-full "
-          type="select"
-          label-class="text-lg"
-          label="Cidade"
-          validation="required"
-          placeholder="Cidade"
-          message-class="ml-2 text-error text-xs"
-          :options="['Registro', 'Sete Barras', 'Jacupiranga']"
-          :validation-messages="{
-            required: 'O campo está vazio',
-          }"
-        />
-        <FormKit
-          outer-class="mx-5 mb-2"
-          input-class="input input-bordered rounded-md w-full"
-          type="select"
-          label-class="text-lg"
-          label="Estado"
-          validation="required"
-          placeholder="Estado"
-          message-class="ml-2 text-error text-xs"
-          :options="['São Paulo']"
-          :validation-messages="{
-            required: 'O campo está vazio',
-          }"
-        />
-        <FormKit
+         <FormKit
           outer-class="mx-5 mb-2"
           input-class="input input-bordered rounded-md w-full"
           label-class="text-lg"
