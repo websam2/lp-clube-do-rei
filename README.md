@@ -1,2 +1,3 @@
-# Vue 3 + Vite + TailwindCSS
+## Descrição
 
+Landing Page do Clube do Rei em desenvolvimento.
